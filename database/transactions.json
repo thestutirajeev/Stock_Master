@@ -1,0 +1,38 @@
+{
+    "2503030102_R": {
+        "transaction_id": "2503030102_R",
+        "customer_name": "Rajeev",
+        "customer_phone": "9876543210",
+        "product_ids": [
+            "P103",
+            "P104"
+        ],
+        "quantities": [
+            2,
+            1
+        ],
+        "prices": [
+            1800,
+            1500
+        ],
+        "date": "2025-03-03 01:02:24"
+    },
+    "2503030105_SR": {
+        "transaction_id": "2503030105_SR",
+        "customer_name": "Stuti Rajeev",
+        "customer_phone": "9876543210",
+        "product_ids": [
+            "P104",
+            "P102"
+        ],
+        "quantities": [
+            2,
+            1
+        ],
+        "prices": [
+            1500,
+            50000
+        ],
+        "date": "2025-03-03 01:05:13"
+    }
+}
