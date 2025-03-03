@@ -1,6 +1,7 @@
 from datetime import datetime
 from models.product import Product
 from models.transaction import Transaction
+from models.auth import Auth
 
 def generate_transaction_id(customer_name):
     """Generate a unique transaction ID based on date and customer initials."""
@@ -9,6 +10,10 @@ def generate_transaction_id(customer_name):
     return f"{timestamp}_{initials}"  # Format: 2502281445_A
 
 def sell_products(product_details, customer_name, customer_phone):
+    """Allow employees and admins to sell products."""
+    if not Auth.get_logged_in_user():
+        return {"error": "Please log in to sell a product."}
+    
     """
     Sell multiple products, decrease stock, and record transaction.
     

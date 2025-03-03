@@ -1,6 +1,6 @@
 import json
 import re
-
+from auth import Auth
 
 class Product:
     #Initializes product details ( Constructor )
@@ -54,6 +54,11 @@ class Product:
     #Adds a new product and saves to JSON
     @staticmethod
     def add_product(product_id, name, price, quantity, category, img, description):
+        """Only admins can add products."""
+        if not Auth.is_admin():
+            return {"error": "Access denied. Admins only."}
+        
+        
         """Add a new product after validation and save to JSON."""
         PRODUCTS_FILE = "database/products.json"
 
@@ -103,6 +108,11 @@ class Product:
     #Updates product details in the inventory
     @staticmethod
     def update_product(product_id, name=None, price=None, quantity=None, category=None, img=None, description=None):
+        """Only admins can add products."""
+        if not Auth.is_admin():
+            return {"error": "Access denied. Admins only."}
+        
+        
         """Update product details in the inventory."""
 
         # Load products
@@ -148,6 +158,10 @@ class Product:
     #Deletes a product from the inventory
     @staticmethod
     def delete_product(product_id):
+        """Only admins can add products."""
+        if not Auth.is_admin():
+            return {"error": "Access denied. Admins only."}
+        
         """Delete a product from the inventory."""
         
         # Load existing products
