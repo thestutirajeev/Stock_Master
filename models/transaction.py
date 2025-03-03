@@ -37,6 +37,7 @@ class Transaction:
             date=data.get("date")  # Use existing date if available
         )
 
+    # load_transaction returns a dictionary of all transactions
     @staticmethod
     def load_transactions():
         """Load all transactions from JSON with proper object conversion."""
@@ -58,3 +59,5 @@ class Transaction:
                 file,
                 indent=4
             )
+
+

@@ -34,5 +34,59 @@
             50000
         ],
         "date": "2025-03-03 01:05:13"
+    },
+    "2503032333_SR": {
+        "transaction_id": "2502032333_SR",
+        "customer_name": "Stuti Rajeev",
+        "customer_phone": "9876543210",
+        "product_ids": [
+            "P104",
+            "P102"
+        ],
+        "quantities": [
+            200,
+            100
+        ],
+        "prices": [
+            1500,
+            50000
+        ],
+        "date": "2025-02-03 23:33:21"
+    },
+    "2503032334_SR": {
+        "transaction_id": "2503012334_SR",
+        "customer_name": "Stuti Rajeev",
+        "customer_phone": "9876543210",
+        "product_ids": [
+            "P103",
+            "P101"
+        ],
+        "quantities": [
+            20,
+            10
+        ],
+        "prices": [
+            1800,
+            50000
+        ],
+        "date": "2025-03-01 23:34:01"
+    },
+    "2503032336_RS": {
+        "transaction_id": "2503032336_RS",
+        "customer_name": "Rajeev Singh",
+        "customer_phone": "9876543210",
+        "product_ids": [
+            "P103",
+            "P101"
+        ],
+        "quantities": [
+            500,
+            500
+        ],
+        "prices": [
+            1800,
+            50000
+        ],
+        "date": "2025-03-03 23:36:07"
     }
 }
