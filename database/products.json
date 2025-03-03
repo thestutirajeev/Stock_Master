@@ -3,7 +3,16 @@
         "product_id": "P101",
         "name": "Laptop",
         "price": 50000,
-        "quantity": 10,
+        "quantity": 90,
+        "category": "Electronics",
+        "img": "images/laptop.png",
+        "description": "15.6-inch, 8GB RAM, 512GB SSD"
+    },
+    "P102": {
+        "product_id": "P102",
+        "name": "Mouse",
+        "price": 50000,
+        "quantity": 500,
         "category": "Electronics",
         "img": "images/laptop.png",
         "description": "15.6-inch, 8GB RAM, 512GB SSD"
@@ -12,7 +21,7 @@
         "product_id": "P103",
         "name": "Keyboard",
         "price": 1800,
-        "quantity": 25,
+        "quantity": 780,
         "category": "Electronics",
         "img": "images/keyboard.jpg",
         "description": "Wireless Keyboard"
@@ -21,7 +30,7 @@
         "product_id": "P104",
         "name": "Keyboard",
         "price": 1500,
-        "quantity": 12,
+        "quantity": 430,
         "category": "Electronics",
         "img": "images/keyboard.jpg",
         "description": "Wireless Keyboard"
