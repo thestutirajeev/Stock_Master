@@ -1,6 +1,6 @@
 import json
 import re
-from auth import Auth
+from authentication import Auth
 
 class Product:
     #Initializes product details ( Constructor )
@@ -43,6 +43,9 @@ class Product:
     #Loads products from JSON and returns a dictionary of Product objects
     @staticmethod
     def load_products():
+        """Login Required"""
+        if not Auth.get_logged_in_user():
+            return {"error": "Access denied. Login required."}
         PRODUCTS_FILE = "database/products.json"
         try:
             with open(PRODUCTS_FILE, "r") as file:
@@ -180,7 +183,6 @@ class Product:
 
         return True, "✅ Product deleted successfully!"
     
-
     # All Search Functions
 
     #Search for a product by its ID
@@ -201,6 +203,8 @@ class Product:
         - price_range: Tuple (min_price, max_price) - either can be None.
         - quantity_range: Tuple (min_qty, max_qty) - either can be None.
         """
+        if not Auth.get_logged_in_user():
+            return {"error": "Access denied. Login required."}
         products = Product.load_products()
         results = []
 

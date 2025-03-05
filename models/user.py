@@ -17,6 +17,8 @@ class User:
 
     @staticmethod
     def verify_password(password, hashed_password):
+        if not hashed_password.startswith("$2b$"):  # Check for valid bcrypt format
+            return False
         """Verify password against the stored hashed version."""
         return bcrypt.checkpw(password.encode(), hashed_password.encode())
 
@@ -29,11 +31,11 @@ class User:
         except (FileNotFoundError, json.JSONDecodeError):
             return {}
 
-    @staticmethod
+    '''@staticmethod
     def save_users(users):
         """Save users to JSON file."""
         with open(USERS_FILE, "w") as file:
-            json.dump(users, file, indent=4)
+            json.dump(users, file, indent=4)'''
 
     @classmethod
     def authenticate(cls, username, password):

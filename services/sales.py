@@ -1,7 +1,7 @@
 from datetime import datetime
 from models.product import Product
 from models.transaction import Transaction
-from models.auth import Auth
+from authentication import Auth
 
 def generate_transaction_id(customer_name):
     """Generate a unique transaction ID based on date and customer initials."""

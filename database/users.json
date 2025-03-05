@@ -1,6 +1,6 @@
 {
     "admin": {
-        "password": "9e4c5195c7d40f4cbdc50f0a84f5e4e6cd28d957e03f7c7bcbbdc7749940cd95",
+        "password": "$2b$12$24MhShMnG4ip1Ku5pcyo2ev90zjUi5TwkFVcbT2hcEaOTx2.LGGa.",
         "role": "admin"
     }
 }

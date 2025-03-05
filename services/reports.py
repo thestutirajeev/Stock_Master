@@ -1,7 +1,7 @@
 from collections import defaultdict
 from models.transaction import Transaction
 from models.product import Product
-from models.auth import Auth
+from authentication import Auth
 from datetime import datetime, timedelta
 
 def filter_transactions_by_date(days=None):

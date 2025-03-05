@@ -1,6 +1,9 @@
 from models.product import Product
-
+from authentication import Auth
 def check_stock_levels(threshold=5):
+    #check if user is logged in
+    if not Auth.get_logged_in_user():
+        return {"error": "Please log in to check stock levels."}
     """Checks stock levels and returns a list of low-stock items."""
     products = Product.load_products()  # It returns a dict of Product objects
     low_stock_items = [
@@ -12,6 +15,10 @@ def check_stock_levels(threshold=5):
 
 
 def refill_stock(product_id, quantity):
+    """Allow employees and admins to sell products."""
+    if not Auth.get_logged_in_user():
+        return {"error": "Please log in to refill stock."}
+    
     """Increases stock of a specific product using update_product."""
     if quantity <= 0:
         return {"error": "Quantity must be greater than zero."}
