@@ -31,11 +31,11 @@ class User:
         except (FileNotFoundError, json.JSONDecodeError):
             return {}
 
-    '''@staticmethod
+    @staticmethod
     def save_users(users):
         """Save users to JSON file."""
         with open(USERS_FILE, "w") as file:
-            json.dump(users, file, indent=4)'''
+            json.dump(users, file, indent=4)
 
     @classmethod
     def authenticate(cls, username, password):
