@@ -55,7 +55,6 @@ A simple console-based Inventory Management System built in Python to help busin
 ---
 
 ## 📂 Project Structure
-```
 STOCK_MASTER/
 ├── __pycache__/
 ├── database/
@@ -77,7 +76,6 @@ STOCK_MASTER/
 ├── authentication.py
 ├── inventory.py
 └── temp.py
-```
 ---
 
 ## 🧑‍💻 Usage
