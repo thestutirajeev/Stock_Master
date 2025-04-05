@@ -55,18 +55,21 @@ A simple console-based Inventory Management System built in Python to help busin
 ---
 
 ## 📂 Project Structure
-
 ```
 STOCK_MASTER/
+├── __pycache__/
 ├── database/
+│   ├── images/
 │   ├── products.json
 │   ├── transactions.json
 │   └── users.json
 ├── models/
+│   ├── __pycache__/
 │   ├── product.py
 │   ├── transaction.py
 │   └── user.py
 ├── services/
+│   ├── __pycache__/
 │   ├── reports.py
 │   ├── sales.py
 │   └── stock_management.py
@@ -75,7 +78,6 @@ STOCK_MASTER/
 ├── inventory.py
 └── temp.py
 ```
-
 ---
 
 ## 🧑‍💻 Usage
